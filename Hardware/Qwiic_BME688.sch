@@ -22802,6 +22802,74 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="BME688">
+<packages>
+<package name="LGA_8PIN">
+<description>LGA package of the BME688 gas sensor from Bosch.</description>
+<wire x1="-1.5" y1="1.5" x2="-1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="-1.5" y1="-1.5" x2="1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="-1.5" x2="1.5" y2="1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="1.5" x2="-1.5" y2="1.5" width="0.1" layer="51"/>
+<smd name="1" x="1.2" y="1.2" dx="0.4" dy="0.4" layer="1"/>
+<smd name="2" x="1.2" y="0.4" dx="0.4" dy="0.4" layer="1"/>
+<smd name="3" x="1.2" y="-0.4" dx="0.4" dy="0.4" layer="1"/>
+<smd name="4" x="1.2" y="-1.2" dx="0.4" dy="0.4" layer="1"/>
+<smd name="5" x="-1.2" y="-1.2" dx="0.4" dy="0.4" layer="1"/>
+<smd name="6" x="-1.2" y="-0.4" dx="0.4" dy="0.4" layer="1"/>
+<smd name="7" x="-1.2" y="0.4" dx="0.4" dy="0.4" layer="1"/>
+<smd name="8" x="-1.2" y="1.2" dx="0.4" dy="0.4" layer="1"/>
+<circle x="1.27" y="2.032" radius="0.127" width="0.254" layer="21"/>
+<wire x1="-1.524" y1="1.524" x2="1.524" y2="1.524" width="0.2032" layer="21"/>
+<wire x1="1.524" y1="1.524" x2="1.524" y2="-1.524" width="0.2032" layer="21"/>
+<wire x1="1.524" y1="-1.524" x2="-1.524" y2="-1.524" width="0.2032" layer="21"/>
+<wire x1="-1.524" y1="-1.524" x2="-1.524" y2="1.524" width="0.2032" layer="21"/>
+<text x="-1.27" y="2.54" size="0.635" layer="27" font="vector">&gt;Value</text>
+<text x="-1.27" y="-2.54" size="0.635" layer="25" font="vector">&gt;Name</text>
+</package>
+</packages>
+<symbols>
+<symbol name="BME688">
+<description>This is the schematic symbol for the BME688 gas sensor from Bosch.</description>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<pin name="CSB" x="12.7" y="2.54" visible="pin" length="short" direction="pwr" rot="R180"/>
+<pin name="SDI" x="12.7" y="0" visible="pin" length="short" rot="R180"/>
+<pin name="SCK" x="12.7" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="SDO" x="12.7" y="-5.08" visible="pin" length="short" direction="pwr" rot="R180"/>
+<pin name="VDDIO" x="-12.7" y="0" visible="pin" length="short" direction="pwr"/>
+<pin name="GND" x="-12.7" y="-5.08" visible="pin" length="short" direction="pwr"/>
+<pin name="VDD" x="-12.7" y="2.54" visible="pin" length="short" direction="pwr"/>
+<text x="-10.16" y="6.096" size="1.778" layer="95" font="vector">&gt;Name</text>
+<text x="-10.16" y="-10.16" size="1.778" layer="96" font="vector">&gt;Value</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BME688" prefix="U">
+<description>BME688 gas sensor from Bosch.</description>
+<gates>
+<gate name="U1" symbol="BME688" x="0" y="0"/>
+</gates>
+<devices>
+<device name="LGA" package="LGA_8PIN">
+<connects>
+<connect gate="U1" pin="CSB" pad="2"/>
+<connect gate="U1" pin="GND" pad="1 7"/>
+<connect gate="U1" pin="SCK" pad="4"/>
+<connect gate="U1" pin="SDI" pad="3"/>
+<connect gate="U1" pin="SDO" pad="5"/>
+<connect gate="U1" pin="VDD" pad="8"/>
+<connect gate="U1" pin="VDDIO" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -22847,12 +22915,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LOGO6" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME" device=".1_INCH"/>
 <part name="JP7" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
 <part name="JP8" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
+<part name="U1" library="BME688" deviceset="BME688" device="LGA"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v01</text>
-<text x="121.92" y="73.66" size="1.778" layer="97" font="vector" align="center">7-bit unshifted I2C address: 0x59</text>
+<text x="210.82" y="76.2" size="1.778" layer="97" font="vector" align="center">7-bit unshifted I2C address: 0x59</text>
 <text x="61.468" y="144.526" size="1.778" layer="97" font="vector">Power</text>
 <wire x1="0" y1="127" x2="121.92" y2="127" width="0.2032" layer="97" style="longdash"/>
 <wire x1="121.92" y1="127" x2="248.92" y2="127" width="0.2032" layer="97" style="longdash"/>
@@ -22860,7 +22929,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="121.92" y1="68.58" x2="248.92" y2="68.58" width="0.2032" layer="97" style="longdash"/>
 <wire x1="121.92" y1="127" x2="121.92" y2="185.42" width="0.2032" layer="97" style="longdash"/>
 <text x="144.78" y="177.8" size="2.54" layer="94" font="vector" align="center">I2C Pull-Up</text>
-<text x="12.7" y="119.38" size="2.54" layer="94" font="vector" align="center">SGP40</text>
+<text x="20.32" y="121.92" size="2.54" layer="94" font="vector" align="center">BME688 Gas Sensor</text>
 <text x="20.32" y="60.96" size="2.54" layer="94" font="vector" align="center">Connectors</text>
 <text x="58.42" y="165.1" size="1.778" layer="97" font="vector">Cut the PWR jumper to
 disable the PWR LED</text>
@@ -22869,7 +22938,7 @@ pullup resistors from the I2C bus</text>
 <text x="12.7" y="177.8" size="2.54" layer="94" font="vector" align="center">LED</text>
 <wire x1="121.92" y1="0" x2="121.92" y2="68.58" width="0.2032" layer="97" style="longdash"/>
 <text x="168.402" y="11.43" size="2.54" layer="94" font="vector">Priyanka Makin</text>
-<text x="121.92" y="78.74" size="1.778" layer="97" font="vector" align="center">Abs min/max Vdd and Vddh: -0.3 to +3.6V
+<text x="205.74" y="81.28" size="1.778" layer="97" font="vector" align="center">Abs min/max Vdd and Vddh: -0.3 to +3.6V
 Operating current @ 3.3V: 3.0 mA</text>
 </plain>
 <instances>
@@ -22954,6 +23023,10 @@ Operating current @ 3.3V: 3.0 mA</text>
 <instance part="LOGO6" gate="G$1" x="187.96" y="48.26" smashed="yes"/>
 <instance part="JP7" gate="G$1" x="243.84" y="30.48" smashed="yes"/>
 <instance part="JP8" gate="G$1" x="243.84" y="27.94" smashed="yes"/>
+<instance part="U1" gate="U1" x="58.42" y="99.06" smashed="yes">
+<attribute name="NAME" x="48.26" y="105.156" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="48.26" y="88.9" size="1.778" layer="96" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>

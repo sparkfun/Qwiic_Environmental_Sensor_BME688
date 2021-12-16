@@ -2523,6 +2523,32 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
+<library name="BME688">
+<packages>
+<package name="LGA_8PIN">
+<description>LGA package of the BME688 gas sensor from Bosch.</description>
+<wire x1="-1.5" y1="1.5" x2="-1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="-1.5" y1="-1.5" x2="1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="-1.5" x2="1.5" y2="1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="1.5" x2="-1.5" y2="1.5" width="0.1" layer="51"/>
+<smd name="1" x="1.2" y="1.2" dx="0.4" dy="0.4" layer="1"/>
+<smd name="2" x="1.2" y="0.4" dx="0.4" dy="0.4" layer="1"/>
+<smd name="3" x="1.2" y="-0.4" dx="0.4" dy="0.4" layer="1"/>
+<smd name="4" x="1.2" y="-1.2" dx="0.4" dy="0.4" layer="1"/>
+<smd name="5" x="-1.2" y="-1.2" dx="0.4" dy="0.4" layer="1"/>
+<smd name="6" x="-1.2" y="-0.4" dx="0.4" dy="0.4" layer="1"/>
+<smd name="7" x="-1.2" y="0.4" dx="0.4" dy="0.4" layer="1"/>
+<smd name="8" x="-1.2" y="1.2" dx="0.4" dy="0.4" layer="1"/>
+<circle x="1.27" y="2.032" radius="0.127" width="0.254" layer="21"/>
+<wire x1="-1.524" y1="1.524" x2="1.524" y2="1.524" width="0.2032" layer="21"/>
+<wire x1="1.524" y1="1.524" x2="1.524" y2="-1.524" width="0.2032" layer="21"/>
+<wire x1="1.524" y1="-1.524" x2="-1.524" y2="-1.524" width="0.2032" layer="21"/>
+<wire x1="-1.524" y1="-1.524" x2="-1.524" y2="1.524" width="0.2032" layer="21"/>
+<text x="-1.27" y="2.54" size="0.635" layer="27" font="vector">&gt;Value</text>
+<text x="-1.27" y="-2.54" size="0.635" layer="25" font="vector">&gt;Name</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 <attribute name="REVISION" value="A"/>
@@ -2789,6 +2815,10 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$5" library="output" package="PWR0" value="" x="0.762" y="7.747" smashed="yes"/>
 <element name="U$6" library="output" package="#PWR#0" value="" x="5.715" y="6.35" smashed="yes" rot="MR0"/>
+<element name="U1" library="BME688" package="LGA_8PIN" value="BME688LGA" x="-15.24" y="-10.16" smashed="yes">
+<attribute name="NAME" x="-16.51" y="-12.7" size="0.635" layer="25" font="vector"/>
+<attribute name="VALUE" x="-16.51" y="-7.62" size="0.635" layer="27" font="vector"/>
+</element>
 </elements>
 <signals>
 <signal name="3.3V">
@@ -2821,10 +2851,14 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <contactref element="D1" pad="C"/>
 <contactref element="J1" pad="1"/>
 <via x="1.016" y="6.35" extent="1-16" drill="0.3"/>
+<contactref element="U1" pad="7"/>
+<contactref element="U1" pad="1"/>
 <wire x1="8.89" y1="1.27" x2="20.32" y2="11.2" width="0" layer="19" extent="1-1"/>
 <wire x1="2.298" y1="6.35" x2="8.89" y2="1.27" width="0" layer="19" extent="1-1"/>
 <wire x1="1.016" y1="6.35" x2="2.298" y2="6.35" width="0" layer="19" extent="1-1"/>
 <wire x1="5.08" y1="14.2" x2="2.298" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.04" y1="-8.96" x2="1.016" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="-16.44" y1="-9.76" x2="-14.04" y2="-8.96" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL">
 <contactref element="J2" pad="4"/>
@@ -2864,6 +2898,18 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <contactref element="I2C" pad="1"/>
 <contactref element="R2" pad="2"/>
 <wire x1="16.256" y1="16.598" x2="13.7414" y2="17.78" width="0" layer="19" extent="1-16"/>
+</signal>
+<signal name="CSB">
+<contactref element="U1" pad="2"/>
+</signal>
+<signal name="SDO">
+<contactref element="U1" pad="5"/>
+</signal>
+<signal name="VDDIO">
+<contactref element="U1" pad="6"/>
+</signal>
+<signal name="VDD">
+<contactref element="U1" pad="8"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
