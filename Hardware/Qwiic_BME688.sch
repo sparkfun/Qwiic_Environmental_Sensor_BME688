@@ -23902,7 +23902,7 @@ board edge.</text>
 <label x="73.66" y="27.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="SDA" class="0">
+<net name="SDA/POCI" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="3"/>
 <wire x1="45.72" y1="48.26" x2="40.64" y2="48.26" width="0.1524" layer="91"/>
@@ -23962,11 +23962,6 @@ board edge.</text>
 </net>
 <net name="SDO" class="0">
 <segment>
-<pinref part="U1" gate="U1" pin="SDO"/>
-<wire x1="139.7" y1="93.98" x2="142.24" y2="93.98" width="0.1524" layer="91"/>
-<label x="142.24" y="93.98" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="ADR" gate="G$1" pin="2"/>
 <wire x1="180.34" y1="93.98" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
 <label x="177.8" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -23999,6 +23994,13 @@ board edge.</text>
 <pinref part="ADR" gate="G$1" pin="1"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="185.42" y1="101.6" x2="185.42" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SDO/PICO" class="0">
+<segment>
+<pinref part="U1" gate="U1" pin="SDO"/>
+<wire x1="139.7" y1="93.98" x2="142.24" y2="93.98" width="0.1524" layer="91"/>
+<label x="142.24" y="93.98" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
