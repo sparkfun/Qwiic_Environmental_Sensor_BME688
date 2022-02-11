@@ -23598,7 +23598,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <sheets>
 <sheet>
 <plain>
-<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v10</text>
+<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v02</text>
 <text x="210.82" y="111.76" size="1.778" layer="97" font="vector" align="center">Default, 7-bit unshifted 
 I2C address: 0x76</text>
 <text x="61.468" y="144.526" size="1.778" layer="97" font="vector">Power</text>
@@ -23612,7 +23612,7 @@ I2C address: 0x76</text>
 <text x="20.32" y="60.96" size="2.54" layer="94" font="vector" align="center">Connectors</text>
 <text x="58.42" y="165.1" size="1.778" layer="97" font="vector">Cut the LED jumper to
 disable the PWR LED</text>
-<text x="187.96" y="165.1" size="1.27" layer="97" font="vector">Cut I2C Jumper to remove 
+<text x="187.96" y="165.1" size="1.778" layer="97" font="vector">Cut I2C Jumper to remove 
 pullup resistors from the I2C bus</text>
 <text x="12.7" y="177.8" size="2.54" layer="94" font="vector" align="center">LED</text>
 <wire x1="139.7" y1="0" x2="139.7" y2="68.58" width="0.2032" layer="97" style="longdash"/>
