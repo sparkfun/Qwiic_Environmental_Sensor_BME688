@@ -23598,7 +23598,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <sheets>
 <sheet>
 <plain>
-<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v01</text>
+<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v10</text>
 <text x="210.82" y="111.76" size="1.778" layer="97" font="vector" align="center">Default, 7-bit unshifted 
 I2C address: 0x76</text>
 <text x="61.468" y="144.526" size="1.778" layer="97" font="vector">Power</text>
@@ -23633,9 +23633,10 @@ pin as CS in SPI mode.</text>
 to I2C communication (address
 0x76). If you wish to communicate
 over SPI, please cut the CSB jumper
-AND the ADR jumper. Then use the 
-SDO, SDI, SCK, and CSB holes on the 
-board edge.</text>
+AND the ADR jumper. Remove the I2C
+pullup resistors by cutting the I2C 
+jumper. Then use the SDO, SDI, SCK, 
+and CSB holes on the board edge.</text>
 </plain>
 <instances>
 <instance part="JP3" gate="G$1" x="246.38" y="30.48" smashed="yes"/>
@@ -23874,7 +23875,7 @@ board edge.</text>
 <wire x1="76.2" y1="20.32" x2="76.2" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SCL" class="0">
+<net name="SCL/SCK" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="4"/>
 <wire x1="45.72" y1="50.8" x2="40.64" y2="50.8" width="0.1524" layer="91"/>
@@ -23902,7 +23903,7 @@ board edge.</text>
 <label x="73.66" y="27.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="SDA/POCI" class="0">
+<net name="SDA/PICO" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="3"/>
 <wire x1="45.72" y1="48.26" x2="40.64" y2="48.26" width="0.1524" layer="91"/>
@@ -23960,18 +23961,6 @@ board edge.</text>
 <wire x1="193.04" y1="162.56" x2="193.04" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SDO" class="0">
-<segment>
-<pinref part="ADR" gate="G$1" pin="2"/>
-<wire x1="180.34" y1="93.98" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
-<label x="177.8" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="J3" gate="G$1" pin="6"/>
-<wire x1="78.74" y1="15.24" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
-<label x="73.66" y="15.24" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="CSB" class="0">
 <segment>
 <pinref part="U1" gate="U1" pin="CSB"/>
@@ -23996,11 +23985,21 @@ board edge.</text>
 <wire x1="185.42" y1="101.6" x2="185.42" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SDO/PICO" class="0">
+<net name="SDO/POCI" class="0">
 <segment>
 <pinref part="U1" gate="U1" pin="SDO"/>
 <wire x1="139.7" y1="93.98" x2="142.24" y2="93.98" width="0.1524" layer="91"/>
 <label x="142.24" y="93.98" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="ADR" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="93.98" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
+<label x="177.8" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="6"/>
+<wire x1="78.74" y1="15.24" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
+<label x="73.66" y="15.24" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

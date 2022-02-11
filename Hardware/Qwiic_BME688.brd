@@ -3,7 +3,7 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -5857,7 +5857,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <contactref element="J3" pad="4"/>
 <via x="12.319" y="11.938" extent="1-16" drill="0.3048"/>
 </signal>
-<signal name="SCL">
+<signal name="SCL/SCK">
 <contactref element="J2" pad="4"/>
 <contactref element="J4" pad="4"/>
 <contactref element="R2" pad="1"/>
@@ -5888,7 +5888,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <wire x1="19.05" y1="1.27" x2="18.669" y2="1.27" width="0.2032" layer="1"/>
 <wire x1="18.669" y1="1.27" x2="16.694" y2="3.245" width="0.2032" layer="1"/>
 </signal>
-<signal name="SDA/POCI">
+<signal name="SDA/PICO">
 <contactref element="J2" pad="3"/>
 <contactref element="J4" pad="3"/>
 <contactref element="R1" pad="1"/>
@@ -5944,18 +5944,6 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <wire x1="16.129" y1="18.923" x2="16.1036" y2="18.9484" width="0.2032" layer="16"/>
 <wire x1="16.1036" y1="18.9484" x2="16.1036" y2="20.32" width="0.2032" layer="16"/>
 </signal>
-<signal name="SDO">
-<contactref element="ADR" pad="2"/>
-<contactref element="J3" pad="6"/>
-<wire x1="11.5" y1="10.611" x2="11.43" y2="10.541" width="0.2032" layer="1"/>
-<via x="11.43" y="10.541" extent="1-16" drill="0.3048"/>
-<wire x1="11.43" y1="10.541" x2="11.43" y2="9.398" width="0.2032" layer="16"/>
-<wire x1="11.43" y1="9.398" x2="11.43" y2="5.715" width="0.2032" layer="16"/>
-<wire x1="11.43" y1="5.715" x2="10.414" y2="4.699" width="0.2032" layer="16"/>
-<wire x1="10.414" y1="4.699" x2="7.239" y2="4.699" width="0.2032" layer="16"/>
-<wire x1="7.239" y1="4.699" x2="6.35" y2="3.81" width="0.2032" layer="16"/>
-<wire x1="6.35" y1="3.81" x2="6.35" y2="1.27" width="0.2032" layer="16"/>
-</signal>
 <signal name="CSB">
 <contactref element="U1" pad="2"/>
 <contactref element="CSB" pad="2"/>
@@ -5984,8 +5972,19 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <wire x1="8.128" y1="9.144" x2="8.04" y2="9.232" width="0.2032" layer="1"/>
 <wire x1="8.04" y1="9.232" x2="8.04" y2="10.16" width="0.2032" layer="1"/>
 </signal>
-<signal name="SDO/PICO">
+<signal name="SDO/POCI">
 <contactref element="U1" pad="5"/>
+<contactref element="ADR" pad="2"/>
+<contactref element="J3" pad="6"/>
+<wire x1="11.5" y1="10.611" x2="11.43" y2="10.541" width="0.2032" layer="1"/>
+<via x="11.43" y="10.541" extent="1-16" drill="0.3048"/>
+<wire x1="11.43" y1="10.541" x2="11.43" y2="9.398" width="0.2032" layer="16"/>
+<wire x1="11.43" y1="9.398" x2="11.43" y2="5.715" width="0.2032" layer="16"/>
+<wire x1="11.43" y1="5.715" x2="10.414" y2="4.699" width="0.2032" layer="16"/>
+<wire x1="10.414" y1="4.699" x2="7.239" y2="4.699" width="0.2032" layer="16"/>
+<wire x1="7.239" y1="4.699" x2="6.35" y2="3.81" width="0.2032" layer="16"/>
+<wire x1="6.35" y1="3.81" x2="6.35" y2="1.27" width="0.2032" layer="16"/>
+<wire x1="11.5" y1="10.611" x2="11.5" y2="11.5" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
