@@ -23598,7 +23598,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <sheets>
 <sheet>
 <plain>
-<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v02</text>
+<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v10</text>
 <text x="210.82" y="111.76" size="1.778" layer="97" font="vector" align="center">Default, 7-bit unshifted 
 I2C address: 0x76</text>
 <text x="61.468" y="144.526" size="1.778" layer="97" font="vector">Power</text>
