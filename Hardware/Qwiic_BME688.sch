@@ -23252,7 +23252,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="10.16" y1="-7.62" x2="10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="5.08" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
-<pin name="CSB" x="12.7" y="2.54" visible="pin" length="short" direction="pwr" rot="R180"/>
+<pin name="!CSB!" x="12.7" y="2.54" visible="pin" length="short" direction="pwr" rot="R180"/>
 <pin name="SDI" x="12.7" y="0" visible="pin" length="short" rot="R180"/>
 <pin name="SCK" x="12.7" y="-2.54" visible="pin" length="short" rot="R180"/>
 <pin name="SDO" x="12.7" y="-5.08" visible="pin" length="short" direction="pwr" rot="R180"/>
@@ -23272,7 +23272,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <devices>
 <device name="LGA" package="LGA_8PIN">
 <connects>
-<connect gate="U1" pin="CSB" pad="2"/>
+<connect gate="U1" pin="!CSB!" pad="2"/>
 <connect gate="U1" pin="GND" pad="1 7"/>
 <connect gate="U1" pin="SCK" pad="4"/>
 <connect gate="U1" pin="SDI" pad="3"/>
@@ -24002,7 +24002,7 @@ and CSB holes on the board edge.</text>
 </net>
 <net name="!CSB!" class="0">
 <segment>
-<pinref part="U1" gate="U1" pin="CSB"/>
+<pinref part="U1" gate="U1" pin="!CSB!"/>
 <wire x1="134.62" y1="101.6" x2="137.16" y2="101.6" width="0.1524" layer="91"/>
 <label x="139.7" y="101.6" size="1.27" layer="95" xref="yes"/>
 <pinref part="CSB" gate="G$1" pin="2"/>
@@ -24044,15 +24044,6 @@ and CSB holes on the board edge.</text>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="104,1,45.72,43.18,J2,1,GND,,,"/>
-<approved hash="104,1,45.72,45.72,J2,2,3.3V,,,"/>
-<approved hash="104,1,45.72,15.24,J4,1,GND,,,"/>
-<approved hash="104,1,45.72,17.78,J4,2,3.3V,,,"/>
-<approved hash="104,1,111.76,96.52,U1,VDD,N$5,,,"/>
-<approved hash="104,1,111.76,93.98,U1,VDDH,3.3V,,,"/>
-<approved hash="113,1,81.9573,48.3277,J1,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
