@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -6150,7 +6150,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <wire x1="16.129" y1="18.923" x2="16.1036" y2="18.9484" width="0.2032" layer="16"/>
 <wire x1="16.1036" y1="18.9484" x2="16.1036" y2="20.32" width="0.2032" layer="16"/>
 </signal>
-<signal name="CSB">
+<signal name="!CSB!">
 <contactref element="U1" pad="2"/>
 <contactref element="CSB" pad="2"/>
 <contactref element="J3" pad="5"/>
