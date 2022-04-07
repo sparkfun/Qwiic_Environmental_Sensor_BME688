@@ -23632,10 +23632,9 @@ pin as CS in SPI mode.</text>
 to I2C communication (address
 0x76). If you wish to communicate
 over SPI, please cut the CSB jumper
-AND the ADR jumper. Remove the I2C
-pullup resistors by cutting the I2C 
-jumper. Then use the SDO, SDI, SCK, 
-and CSB holes on the board edge.</text>
+AND the ADR jumper. Then use the 
+SDO, SDI, SCK, and CSB holes on 
+the board edge.</text>
 <text x="109.22" y="53.34" size="1.778" layer="97" font="vector" align="center">SCL</text>
 <text x="88.9" y="53.34" size="1.778" layer="97" font="vector" align="center">CSB</text>
 <text x="119.38" y="53.34" size="1.778" layer="97" font="vector" align="center">ADR</text>
@@ -23643,7 +23642,7 @@ and CSB holes on the board edge.</text>
 <text x="109.22" y="48.26" size="1.778" layer="97" font="vector" align="center">1</text>
 <text x="119.38" y="48.26" size="1.778" layer="97" font="vector" align="center">1 or 0</text>
 <text x="88.9" y="43.18" size="1.778" layer="97" font="vector" align="center">float</text>
-<text x="109.22" y="43.18" size="1.778" layer="97" font="vector" align="center">float</text>
+<text x="109.22" y="43.18" size="1.778" layer="97" font="vector" align="center">1</text>
 <text x="119.38" y="43.18" size="1.778" layer="97" font="vector" align="center">float</text>
 <text x="130.302" y="53.34" size="1.778" layer="97" font="vector" align="center">Interface</text>
 <text x="129.54" y="48.26" size="1.778" layer="97" font="vector" align="center">I2C</text>
@@ -23673,7 +23672,7 @@ and CSB holes on the board edge.</text>
 <wire x1="104.14" y1="55.88" x2="104.14" y2="40.64" width="0.2032" layer="97"/>
 <text x="99.06" y="53.34" size="1.778" layer="97" font="vector" align="center">SDA</text>
 <text x="99.06" y="48.26" size="1.778" layer="97" font="vector" align="center">1</text>
-<text x="99.06" y="43.18" size="1.778" layer="97" font="vector" align="center">float</text>
+<text x="99.06" y="43.18" size="1.778" layer="97" font="vector" align="center">1</text>
 <text x="100.33" y="61.468" size="1.778" layer="97" font="vector" align="center">Jumper setup for Interface</text>
 <text x="91.44" y="58.42" size="1.778" layer="97" font="vector" align="center">Default: I2C</text>
 </plain>
