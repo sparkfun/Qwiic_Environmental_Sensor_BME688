@@ -23942,7 +23942,7 @@ and CSB holes on the board edge.</text>
 <label x="53.34" y="25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="SDA/PICO" class="0">
+<net name="SDA/COPI" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="3"/>
 <wire x1="25.4" y1="45.72" x2="20.32" y2="45.72" width="0.1524" layer="91"/>
@@ -24024,7 +24024,7 @@ and CSB holes on the board edge.</text>
 <wire x1="177.8" y1="101.6" x2="177.8" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SDO/POCI" class="0">
+<net name="SDO/CIPO" class="0">
 <segment>
 <pinref part="U1" gate="U1" pin="SDO"/>
 <wire x1="134.62" y1="93.98" x2="137.16" y2="93.98" width="0.1524" layer="91"/>
